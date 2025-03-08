@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot hướng dẫn nghiệp vụ VietinBank</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+
+<h3>Chatbot hướng dẫn nghiệp vụ gửi tiết kiệm online</h3>
+
+<select id="service">
+    <option value="">-- Chọn nghiệp vụ --</option>
+    <option value="KHCN">Khách hàng Cá nhân (iPay)</option>
+    <option value="KHTC">Khách hàng Tổ chức (eFAST)</option>
+</select>
+<button onclick="showGuide()">Xem hướng dẫn</button>
+
+<div id="result"></div>
+
+<script>
+const steps = {
+    "KHCN": [
+        "Lập tờ trình TOI ở hệ thống VCRM",
+        "Liên hệ KH mở tài khoản tiết kiệm trên iPay",
+        "Tạo BSS để mở trần lãi suất",
+        "GDV vào TPSS duy trì lãi suất",
+        "KSV phê duyệt trên TPSS",
+        "Kiểm tra và hoàn tất giao dịch"
+    ],
+    "KHTC": [
+        "Lập tờ trình TOI trên VCRM",
+        "Tạo BSS để mở trần lãi suất",
+        "GDV duy trì lãi suất tại Register",
+        "KSV phê duyệt tại Register",
+        "Hướng dẫn KH mở tài khoản có kỳ hạn trên eFAST và hoàn tất"
+    ]
+};
+
+function showGuide() {
+    const selected = document.getElementById('service').value;
+    if (!selected) {
+        alert("Vui lòng chọn nghiệp vụ!");
+        return;
+    }
+
+    let html = `<table><tr><th>Số thứ tự</th><th>Mô tả nghiệp vụ</th></tr>`;
+    steps[selected].forEach((desc, index) => {
+        html += `<tr><td>${index + 1}</td><td>${desc}</td></tr>`;
+    });
+    html += "</table>";
+
+    document.getElementById('result').innerHTML = html;
+}
+</script>
+
+</body>
+</html>
