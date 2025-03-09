@@ -47,9 +47,6 @@ function showGuide() {
         alert("Vui lòng chọn nghiệp vụ!");
         return;
     }
-    if (selected == "") {
-        document.getElementById('result').innerHTML = "";
-    }
     else {
         let html = `<table><tr><th>Số thứ tự</th><th>Mô tả nghiệp vụ</th></tr>`;
         steps[selected].forEach((desc, index) => {
