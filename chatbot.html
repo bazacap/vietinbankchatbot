@@ -48,7 +48,7 @@ function showGuide() {
         return;
     }
     else {
-        let html = `<table><tr><th>Số thứ tự</th><th>Mô tả nghiệp vụ</th></tr>`;
+        let html = `<table><tr><th>Thứ tự thực hiện</th><th>Mô tả nghiệp vụ chi tiết</th></tr>`;
         steps[selected].forEach((desc, index) => {
             html += `<tr><td>${index + 1}</td><td>${desc}</td></tr>`;
         });
