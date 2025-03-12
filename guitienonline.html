@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Chatbot hướng dẫn nghiệp vụ VietinBank</title>
+    <title>Knownledge Base</title>
     <style>
         table { border-collapse: collapse; width: 100%; margin-top: 10px; }
         th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
@@ -10,12 +10,13 @@
 </head>
 <body>
 
-<h3>Chatbot hướng dẫn nghiệp vụ gửi tiết kiệm online</h3>
+<h3>Báo Vnexpress.net</h3>
 
 <select id="service">
     <option value="">-- Chọn nghiệp vụ --</option>
-    <option value="KHCN">Khách hàng Cá nhân (iPay)</option>
-    <option value="KHTC">Khách hàng Tổ chức (eFAST)</option>
+    <option value="WORK">Công việc</option>
+    <option value="KHCN">Kiến thức khoa học</option>
+    <option value="PHAT">Triết học Phật học phương đông</option>
 </select>
 <button onclick="showGuide()">Xem hướng dẫn</button>
 
@@ -23,20 +24,22 @@
 
 <script>
 const steps = {
-    "KHCN": [
-        "Lập tờ trình TOI ở hệ thống VCRM",
-        "Liên hệ KH mở tài khoản tiết kiệm trên iPay",
-        "Tạo BSS để mở trần lãi suất",
-        "GDV vào TPSS duy trì lãi suất",
-        "KSV phê duyệt trên TPSS",
-        "Kiểm tra và hoàn tất giao dịch"
+    "WORK": [
+        "Term SOFR>>https://www.cmegroup.com/market-data/cme-group-benchmark-administration/term-sofr.html",
+        "Euribor>>https://www.global-rates.com/en/interest-rates/euribor/",        
+        "sci-hub>>https://sci-hub.se/",
+        "oracle01>>https://docs.oracle.com/cd/E89497_01/html/rpm_80_installation/GUID-6A32D1A9-A5B8-47D3-BD48-7EBF744CFD04.htm",
+        "json>>https://jsoneditoronline.org/#left=local.pelami&right=local.dewaci"
     ],
-    "KHTC": [
-        "Lập tờ trình TOI trên VCRM",
-        "Tạo BSS để mở trần lãi suất",
-        "GDV duy trì lãi suất tại Register",
-        "KSV phê duyệt tại Register",
-        "Hướng dẫn KH mở tài khoản có kỳ hạn trên eFAST và hoàn tất"
+    "KHCN": [
+        "vnexpress>>https://vnexpress.net/vi-sao-nguoi-iq-cao-hay-dau-kho-4859280.html",
+        "blockchain>>https://kungfutech.edu.vn/khoa-hoc/blockchain",
+        "Ref>>https://chatgpt.com/share/67d00caf-22ec-8000-8a83-160243c21cec"
+    ],
+    "PHAT": [
+        "langmai>>https://langmai.org/tang-kinh-cac/vien-sach/tap-truyen/tha-mot-be-lau/chuong-06-nguyen-du-va-truyen-kieu/",
+        "Vien Minh>>",
+        "51 Tâm sở>>https://studybuddhism.com/vi/nghien-cuu-cao-cap/khoa-hoc-tam-thuc/tam-va-tam-so/tam-vuong-va-51-tam-so"
     ]
 };
 
@@ -47,13 +50,10 @@ function showGuide() {
         alert("Vui lòng chọn nghiệp vụ!");
         return;
     }
-    if (selected.equals("")) {
-        document.getElementById('result').innerHTML = "";
-    }
     else {
-        let html = `<table><tr><th>Số thứ tự</th><th>Mô tả nghiệp vụ</th></tr>`;
+        let html = `<table><tr><th>Thứ tự</th><th>Mô tả nghiệp vụ chi tiết</th></tr>`;
         steps[selected].forEach((desc, index) => {
-            html += `<tr><td>${index + 1}</td><td>${desc}</td></tr>`;
+            html += `<tr><td width="20%">${index + 1}</td><td width="80%">${desc}</td></tr>`;
         });
         html += "</table>";
     
