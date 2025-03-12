@@ -53,7 +53,7 @@ function showGuide() {
     else {
         let html = `<table><tr><th width="5%">Thứ tự</th><th width="95%">Mô tả nghiệp vụ chi tiết</th></tr>`;
         steps[selected].forEach((desc, index) => {
-            html += `<tr><td text-align="center">${index + 1}</td><td>${desc}</td></tr>`;
+            html += `<tr><td align="center">${index + 1}</td><td>${desc}</td></tr>`;
         });
         html += "</table>";
     
