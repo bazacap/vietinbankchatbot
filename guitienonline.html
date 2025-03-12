@@ -51,9 +51,9 @@ function showGuide() {
         return;
     }
     else {
-        let html = `<table><tr><th>Thứ tự</th><th>Mô tả nghiệp vụ chi tiết</th></tr>`;
+        let html = `<table><tr><th width="5%">Thứ tự</th><th width="95%">Mô tả nghiệp vụ chi tiết</th></tr>`;
         steps[selected].forEach((desc, index) => {
-            html += `<tr><td width="20%">${index + 1}</td><td width="80%">${desc}</td></tr>`;
+            html += `<tr><td style="text-align: center;">${index + 1}</td><td>${desc}</td></tr>`;
         });
         html += "</table>";
     
