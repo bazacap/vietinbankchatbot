@@ -19,32 +19,48 @@
             font-size: 24px;
             margin-bottom: 10px;
         }
-        #clock {
+        #clock {      	
+	        float: right;
             font-size: 80px;
             font-weight: bold;
             letter-spacing: 3px;
             margin-top: 10px;
+	        margin-right: 20px;
         }
-        .date {
+        .date {        	
+	        float: left;
             font-size: 22px;
             margin-top: 10px;
             color: #ABC;
+            background-color:  #fff;
+	        text-align: center;
+	        line-height: 100px;
+	        font-weight: bold;
+	        margin-right: 20px;
         }
+        .container {
+            overflow: hidden;
+            justify-content: space-around; /* Canh giữa các phần tử */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            gap: 20px; /* Khoảng cách giữa các div */
+	    }
     </style>
 </head>
 <body>
 
 <h3>Báo Vnexpress.net</h3>
-<div id="clock">--:--:--</div>
-<div class="date" id="date"></div>
-<select id="service">
-    <option value="">-- Chọn nghiệp vụ --</option>
-    <option value="WORK">Công việc</option>
-    <option value="KHCN">Kiến thức khoa học</option>
-    <option value="PHAT">Triết học Phật học phương đông</option>
-</select>
-<button onclick="showGuide()">Xem hướng dẫn</button>
-
+<div class="container"> 
+    <div class="date" id="date"></div>
+    <select id="service">
+        <option value="">-- Chọn nghiệp vụ --</option>
+        <option value="WORK">Công việc</option>
+        <option value="KHCN">Kiến thức khoa học</option>
+        <option value="PHAT">Triết học Phật học phương đông</option>
+    </select>
+    <button onclick="showGuide()">Xem hướng dẫn</button>
+    <div id="clock">--:--:--</div>
+</div>    
+    
 <div id="result"></div>
 
 <script>
