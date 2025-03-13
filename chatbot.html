@@ -2,10 +2,118 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="7 triệu địa điểm, 58 ngôn ngữ, được đồng bộ với đồng hồ nguyên tử."><meta property="og:image" content="https://time.is/img/shareable/time_is_110011.png"><meta property="og:image" content="https://time.is/img/shareable/time_is_110011_dark.png"><meta property="og:image" content="https://time.is/img/shareable/time_is_with_milliseconds_110742.png"><meta property="og:image" content="https://time.is/img/shareable/time_is_with_milliseconds_110742_dark.png"><meta name="viewport" content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="image_src" href="/img/shareable/time_is_110011.png"><link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon_2021-11-20.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Time.is" href="/opensearch.xml">
+    <link rel="alternate" type="application/rss+xml" title="Time Zone News from Time.is" href="https://rss.time.is/time_zone_news.rss">
     <title>Knownledge Base</title>
     <style>
         table { border-collapse: collapse; width: 100%; margin-top: 10px; }
         th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        *{margin:0;padding:0;border:0;outline:0}
+        div,h1,h2,h3,label,time{clear:both}
+        div,img,form{float:left}
+        #clock{float:left}
+        body{background:#fff}
+        span a,.nw,#clock{white-space:nowrap}
+        body,select,input,textarea{font:18px/26px 'Times New Roman',Times,FreeSerif,serif;color:#333;letter-spacing:2px}
+        #nav h3{letter-spacing:1px}
+        @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gnD_g.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: local('Montserrat Black'), local('Montserrat-Black'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_epG3gfD_u50.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: local('Montserrat Black'), local('Montserrat-Black'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_epG3gnD_g.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* vietnamese */
+        @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+        }
+        @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: local('Montserrat Black'), local('Montserrat-Black'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_epG3gbD_u50.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+        }@font-face{font-family:'TimeTraveler';font-style:normal;font-weight:400;src:url('/fonts/TimeTravelerPal-Normal-Regular.ttf') format('truetype')}
+        .mt #clock{font-family:'TimeTraveler',Arial,sans-serif}
+        #clock{font-size:100px;line-height:normal;position:relative;font-weight:bold}
+        #clock span{display:inline-block;text-align:center}
+        #clock0_bg{margin:40px 0}
+        div.lg a:link,div.lg a:visited{text-transform:uppercase;font-weight:600;font-size:16px;padding:20px 30px;letter-spacing:3px}
+        blockquote{font-weight:900}
+        #favs li .time span{display:inline-block;text-align:center;width:13px}
+        @media only screen and (max-width:639px){.mon{width:10px}}
+        @media only screen and (max-width:1024px){#clock0_bg{margin:30px 0}}
+        @media only screen and (max-width:768px){#clock0_bg{margin:20px 0}}
+        @media only screen and (max-width:400px){div.lg a:link,div.lg a:visited{font-size:14px;padding:15px 20px;letter-spacing:2px}}.divider{color:#ccc}
+        .lsp{float:right;color:#333}
+        .lsp ul{list-style:none;text-align:right}
+        a:link,a:visited{color:#333;text-decoration:none;border-bottom:1px solid #ccc}
+        h1,h2,.clockdate,.clockplace{font-size:36px;line-height:40px;font-weight:normal;letter-spacing:1px}
+        .w90{margin-left:5%;width:90%}
+        #c{padding-bottom:40px}
+        #msgdiv{float:left}
+        div#msgs h1{margin-right:30px;float:left}
+        .lg a:link,.lg a:visited{background:#c35;float:left;display:block;color:#fff;border:0;padding:20px;font:26px/20px Montserrat,Arial,sans-serif;font-weight:900;letter-spacing:2px}
+        .lg{z-index:9;position:relative}
+        #pl{display:none}
+        time{cursor:pointer;direction:ltr}
+        
+        #top{width:90%;margin:0 5%}
+        #clock0_bg{width:100%}
+        #clock0,.clockplace,#lC,.clockdate,#daydiv{text-align:right}
+        #pL a:link,#pL a:visited,#pL1 a,#lC,#daydiv,#daydiv1{color:#333}
+        
+        #pL,#pL1{margin-bottom:20px}
+        #favs{width:100%;list-style:none;margin:0 0 10px 0;padding:0;float:right}
+        #favs span{color:#999}
+        .tbx div{clear:none;float:left;text-align:left;white-space:nowrap;font-size:18px;line-height:22px;font-style:normal;font-weight:normal;letter-spacing:2px}
+        .tbx a{display:block;margin:0 0 10px 10px;padding:10px 20px;border:1px solid #eee;background:#eee;text-decoration:none}
+        .txtin,.dateinput{background:#eee;border:1px solid #ddd;width:138px;padding:10px;color:#333}
+        .mout{border-color:#eee}
     </style>
 </head>
 <body>
@@ -21,7 +129,40 @@
 <button onclick="showGuide()">Xem hướng dẫn</button>
 
 <div id="result"></div>
-
+ <br>   
+<div id="time_section" class="w1">
+<div id="msgs" class="tr w90 vsbl">
+   <div id="msgdiv">
+      <h1 id="syncH" style="float:left">Thời gian chính xác hiện tại:</h1>
+   </div>
+   <div id="syncDtl" class="w1">&nbsp;</div>
+   <div id="front_loc" class="w1" style="visibility:hidden">Thời gian ở <a href="Ho_Chi_Minh_City" itemscope itemtype="http://schema.org/City"><span itemprop="name">Thành phố Hồ Chí Minh</span>, Việt Nam</a> hiện tại:</div>
+</div>
+<div style="width:100%;position:relative">
+   <div id="clock0_bg" onclick="clockclick(event)"><time id="clock">14:29:37</time></div>
+</div>
+<noscript>
+   <h2 class="w90 error">Đồng hồ sẽ cập nhật tự động nếu bạn bật JavaScript trong trình duyệt của bạn.</h2>
+</noscript>
+<div id="dd" class="w90 tr clockdate" onclick="location='/vi/calendar'" title="Bấm để xem lịch"> Thứ Năm, 13  Tháng Ba, 2025, tuần 11</div>
+<div id="daydiv" class="hidden"></div>
+<div id="lC" class="w90 tr"><span id="locw">Mặt trời: <span id="sun" class="nw">&uarr; 06:01 &darr; 18:05 (12giờ 5phút)</span> - <a href="Ho_Chi_Minh_City#time_zone">Thêm thông tin</a></span> - <a href="/vi/h/17e583" rel="nofollow"><span>Đặt thời gian Thành phố Hồ Chí Minh làm mặc định</span></a> - <a href="." onclick="conf['b']+='.17e583';delete conf['a'];T_I.recook();location='/vi/';return false" rel="nofollow"><span>Thêm vào vị trí yêu thích</span></a> </div>
+<div class="w90 tr">
+   <ul id="favs" class="tbx collapsible">
+      <li><a href="/vi/Tokyo" id="time-0">Tokyo<br><span id="favt0">16:29</span></a></li>
+      <li><a href="/vi/Beijing" id="time-1">Bắc Kinh<br><span id="favt1">15:29</span></a></li>
+      <li><a href="/vi/Paris" id="time-2">Paris<br><span id="favt2">08:29</span></a></li>
+      <li><a href="/vi/London" id="time-3">Luân Đôn<br><span id="favt3">07:29</span></a></li>
+      <li><a href="/vi/New_York" id="time-4">Thành phố New York<br><span id="favt4">03:29</span></a></li>
+      <li><a href="/vi/Los_Angeles" id="time-5">Los Angeles<br><span id="favt5">00:29</span></a></li>
+   </ul>
+   <div id="favsXpandr" style="float:right"><a href="#" onclick="return expand_favs()">Thêm</a></div>
+</div>
+<div id="recover" style="width:100%">
+<div class="tr" style="width:90%;padding:0 5% 20px 5%">
+<div class="fst" style="float:right">
+<div id="time.is_300x250_ATF3"></div>
+    
 <script>
 const steps = {
     "WORK": [
@@ -62,5 +203,82 @@ function showGuide() {
 }
 </script>
 
+<script>
+bod=gob('bdy')
+var l='vi',conf={d:'%l, %j %F, %Y, %W',t:'H:i:s',f:'mt',c:'2',o:'420',z:'0.8',a:'1',b:'51ea29.4e4185.28571f.2d99db.1bb85e.1c3b23',w:'0',v:'20250313',h:0,i:'.8',Z:'0.8',m:'',u:'',s:'0'},locs={favs:[['1850147','444','Tokyo','Tokyo, Nhật Bản','Tokyo','35,68950','139,69171','8.336.599',''],['1816670','43d','Bắc Kinh','Bắc Kinh, Trung Hoa','Beijing','39,90750','116,39723','18.960.744',''],['2988507','71f','Paris','Paris, Pháp','Paris','48,85341','2,34880','2.138.551',''],['2643743','716','Luân Đôn','Luân Đôn, Vương quốc Anh','London','51,50853','-0,12574','8.961.989',''],['5128581','161','Thành phố New York','Thành phố New York, Hoa Kỳ','New_York','40,71427','-74,00597','8.804.190','10'],['5368361','14e','Los Angeles','Los Angeles, California, Hoa Kỳ','Los_Angeles','34,05223','-118,24368','3.898.747','89']],main:[['1566083','418','Thành phố Hồ Chí Minh','Thành phố Hồ Chí Minh, Việt Nam','Ho_Chi_Minh_City','10,82302','106,62965','8.993.082','']]},zones={'418':['Asia/Ho_Chi_Minh','+07',[420]],'444':['Asia/Tokyo','JST',[540]],'43d':['Asia/Shanghai','CST',[480]],'71f':['Europe/Paris','CET',[60,1743296400,120]],'716':['Europe/London','GMT',[0,1743296400,60]],'161':['America/New_York','EDT',[-240,1762063200,-300]],'14e':['America/Los_Angeles','PDT',[-420,1762074000,-480]]},
+susdest='/vi/'
+zone_id='Asia/Ho_Chi_Minh',Tstate={chosen_loc:-1,current_page:"specific_location"};
+zone_code='clientside'
+zone_offset=-new Date().getTimezoneOffset()
+zones['clientside']=['','',[zone_offset]]
+
+days=["Chủ Nhật"," Thứ Hai"," Thứ Ba"," Thứ Tư"," Thứ Năm"," Thứ Sáu"," Thứ Bảy"]
+daysh=["CN"," Thứ 2"," Thứ 3"," Thứ 4"," Thứ 5"," Thứ 6"," Thứ 7"]
+daysI=["CN"," T2"," T3"," T4"," T5"," T6"," T7"]
+months=["Tháng Một"," Tháng Hai"," Tháng Ba"," Tháng Tư"," Tháng Năm"," Tháng Sáu"," Tháng Bảy"," Tháng Tám"," Tháng Chín"," Tháng Mười"," Tháng Mười Một"," Tháng Mười Hai"]
+monthsh=["Tháng 1"," Tháng 2"," Tháng 3"," Tháng 4"," Tháng 5"," Tháng 6"," Tháng 7"," Tháng 8"," Tháng 9"," Tháng 10"," Tháng 11"," Tháng 12"]
+p_exactt="Thời gian của bạn là chính xác!"
+p_t_is="The exact current time is:"
+p_w="tuần "
+p_wn="tuần %n"
+p_d="ngày"
+p_ds=" ngày"
+p_h=" giờ"
+p_hs=" giờ"
+p_m=" phút"
+p_ms=" phút"
+p_s=" giây"
+p_ss=" giây"
+p_ss_short=" giây"
+p_ur_late="Đồng hồ của bạn hiện đang chậm %t."
+p_ur_early="Đồng hồ của bạn hiện đang nhanh %t."
+p_acc="Độ chính xác của quá trình đồng bộ hoá là ±%t."
+p_acc_short="Độ chính xác: ±%t"
+p_last_s="Đồng bộ lần cuối: %t"
+p_last_s_short="Đ.bộ lần cuối: %t"
+p_dec_sym=","
+p_and=" và "
+p_time_diff="Độ chênh lệch so với Time.is là %t (±%D). "
+p_time_diff_short="Chênh lệch: %t (±%D) "
+p_failh="Quá trình đồng bộ hoá không thành công. "
+p_fail="Không thể đạt được độ chính xác cao vì tốc độ kết nối hoặc máy tính của bạn chậm hoặc đang bận. "
+p_syncing="Đang đồng bộ hoá"
+p_conn_failed="Không thể kết nối đến máy chủ."
+p_try_again="Thử lại?"
+p_no_match="Không khớp"
+p_no_au="Rất tiếc, âm thanh yêu cầu một phiên bản mới gần đây của Edge, Chrome, Firefox, Opera hoặc Safari!"
+p_no_cookie_support="error_no_cookie_support"
+p_td="Hôm nay"
+e_loc="Nhập địa điểm"
+p_time_remaining="Thời gian còn lại: %t"
+p_time_since="Thời gian kể từ đó: %t"
+
+p_now='hiện tại'
+p_yesterday='hôm qua'
+p_tomorrow='ngày mai'
+p_today='hôm nay'
+p_in_n='trong %n nữa'
+p_ago='%n trước'
+p_In_x_days='Trong %n %days'
+p_x_days_ago='%n %days trước'
+p_x_days_before='[%n %days trước] %other_date'
+p_x_days_after='[%n %days sau] %other_date'
+
+p_today_date='[Hôm nay]: %d'
+units=[p_ss,p_ms,p_hs,p_ds],units_sing=[p_s,p_m,p_h,' '+p_d]
+
+p_enter_loc='Nhập địa điểm'
+
+p_default_time_format='H:i:s'
+p_date_formats=['%l, %j %F, %Y, %W',
+'%l %d/%m/%y, %W',
+'%l %d/%m/%y',
+'%Y-%m-%d']
+
+
+spdays={'0314':'<a target="_blank" href="https://www.piday.org/">Pi Day</a> / <a target="_blank" href="https://en.wikipedia.org/wiki/Albert_Einstein">Albert Einstein\'s birthday (1879)</a>','0315':'<a target="_blank" href="http://www.consumersinternational.org/what-we-do/world-consumer-rights-day/">World Consumer Rights Day</a> / Everything You Think Is Wrong Day / <a target="_blank" href="https://worldsleepday.org/">World Sleep Day</a>'}
+noctp=1;adheight=0;;show_big_clock=1;force24=0;beginning_of_time()
+onresize=function(){setsizes(2)}
+</script>
 </body>
 </html>
