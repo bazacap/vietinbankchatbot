@@ -3,15 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Knownledge Base</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         table { border-collapse: collapse; width: 100%; margin-top: 10px; }
         th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FFF;
+            color: #222;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #clock {
+            font-size: 80px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-top: 10px;
+        }
+        .date {
+            font-size: 22px;
+            margin-top: 10px;
+            color: #ABC;
+        }
     </style>
 </head>
 <body>
 
 <h3>Báo Vnexpress.net</h3>
-
+<div id="clock">--:--:--</div>
+<div class="date" id="date"></div>
 <select id="service">
     <option value="">-- Chọn nghiệp vụ --</option>
     <option value="WORK">Công việc</option>
@@ -61,6 +86,28 @@ function showGuide() {
         document.getElementById('result').innerHTML = html;
     }
 }
+    //Thời gian thực tại Sài Gòn
+        function updateTime() {
+            const now = new Date();
+            
+            // Chuyển đổi sang múi giờ Việt Nam (UTC+7)
+            const options = { timeZone: "Asia/Ho_Chi_Minh", hour12: false };
+            const timeString = now.toLocaleTimeString("vi-VN", options);
+            const dateString = now.toLocaleDateString("vi-VN", {
+                weekday: "long",
+                day: "2-digit",
+                month: "long",
+                year: "numeric",
+                timeZone: "Asia/Ho_Chi_Minh"
+            });
+
+            document.getElementById("clock").textContent = timeString;
+            document.getElementById("date").textContent = dateString;
+        }
+
+        // Cập nhật thời gian mỗi giây
+        setInterval(updateTime, 1000);
+        updateTime(); // Gọi ngay khi trang tải
 </script>
 
 </body>
