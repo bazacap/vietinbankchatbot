@@ -21,13 +21,14 @@
         }
         #clock {      	
 	    float: right;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: bold;
             letter-spacing: 3px;
             margin-top: 10px;
             margin-right: 54px;
             width: 50px;
             text-align: left;
+	    line-height: 25px;
         }
         .date {        	
 	    float: left;
@@ -43,8 +44,8 @@
         .container {
             overflow: hidden;
             justify-content: space-around; /* Canh giữa các phần tử */
-            align-items: center; /* Căn giữa theo chiều dọc */
-            gap: 20px; /* Khoảng cách giữa các div */
+            align-items: left; /* Căn giữa theo chiều dọc */
+            gap: 10px; /* Khoảng cách giữa các div */
 	    font-size: 11px;
 	    }
     </style>
@@ -65,7 +66,7 @@
         <option value="KHCN">Kiến thức khoa học</option>
         <option value="PHAT">Triết học Phật học phương đông</option>
     </select>
-    <button onclick="showGuide()">Xem hướng dẫn</button>  
+    <button onclick="showGuide()">Xem</button>  
 </div>  
     
 <div id="result"></div>
