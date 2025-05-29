@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         table { border-collapse: collapse; width: 100%; margin-top: 11px; }
-        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th, td { border: 1px solid #ccc; padding: 6px; text-align: left; font-size: 11px; }
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #FFF;
@@ -101,7 +101,7 @@ function showGuide() {
         return;
     }
     else {
-        let html = `<table><tr><th width="5%">Thứ tự</th><th width="95%">Mô tả nghiệp vụ chi tiết</th></tr>`;
+        let html = `<table><tr><th width="6%">Thứ tự</th><th width="95%">Mô tả nghiệp vụ chi tiết</th></tr>`;
         steps[selected].forEach((desc, index) => {
             html += `<tr><td style="text-align: center;">${index + 1}</td><td>${desc}</td></tr>`;
         });
